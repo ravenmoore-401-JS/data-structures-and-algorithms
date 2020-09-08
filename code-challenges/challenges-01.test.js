@@ -32,19 +32,18 @@ Within the addNumbers function, invoke the callback function as many times as ne
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
-const addValues = (arr, value) => arr.push(value);
-
-
-const addNumbers = (num, arr, times, callback) => {
-  
+const addValues = (arr, value) => {
+  arr.push(value);
 };
 
-// describe('Testing challenge 2', () => {
-//   test('It should add the number 8 to the array five times', () => {
-//     expect(addNumbers(8, [], 5, addValues)).toStrictEqual([8, 8, 8, 8, 8]);
-//     expect(addNumbers(8, [], 5, addValues).length).toStrictEqual(5);
-//   });
-// });
+const addNumbers = (num, arr, times, callback) => {
+  for(let i = 0 ; i < times ; i++){
+    callback(arr, num);
+  }
+  return arr;
+};
+
+
 /* ------------------------------------------------------------------------------------------------
 
 CHALLENGE 3
@@ -64,7 +63,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  let list =[];
+  availableItems.forEach( value => {
+    if(value.available === true ) {
+      list.push(value.name);
+    }
+  });
+  return list;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,7 +87,19 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let noizyArray = [];
+  arr.forEach(value =>{
+    if(value %3 === 0 && value %5 !== 0){
+      noizyArray.push('Fizz');
+    } else if(value %3 !== 0 && value %5 === 0){
+      noizyArray.push('Buzz');
+    }else if(value %3 === 0 && value %5 === 0){
+      noizyArray.push('Fizz Buzz');
+    }else {
+      noizyArray.push(value);
+    }
+  });
+  return noizyArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
