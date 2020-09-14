@@ -64,12 +64,11 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  for (let i =0 ;i < str.length ;i++){
+  for (var i = 0 ; i < (str.length + 1) ; i++){
     let newStr = str.slice(i);
     result.push(newStr);
   }
   return result;
-
 
 };
 
@@ -82,7 +81,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
 const wordsToCharList = (arr) => {
-  // Solution code here...
+  return arr.split('');
 };
 
 
@@ -129,13 +128,12 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  let strArray = [];
-  recipe.forEach(recipecard =>{
-    strArray.push(recipecard.ingredients[0]);
+  let arr = recipe.ingredients;
+  arr.forEach(ingredients =>{
+    let newArr = ingredients.split(' ');
+    newArr.splice(0,2);
+    result.push(newArr.join(' '));
   });
-  for (let i = 0 ; i < strArray[i].length ;i++){
-    strArray[i].slice(i);
-  }
   return result;
 };
 
@@ -256,7 +254,7 @@ Run your tests from the console: jest challenges-05.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should append the star wars people to the DOM', () => {
     templateWithJQuery();
     expect($('section:nth-child(2) h2').text()).toStrictEqual('Luke Skywalker');
