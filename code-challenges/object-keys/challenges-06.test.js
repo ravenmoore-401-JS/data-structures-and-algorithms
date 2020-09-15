@@ -70,9 +70,14 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const templatingWithMustache = () => {
-  
+  const template = $('#template').html();
+  const charArr =[];
+  characters.forEach(char =>{
+    let html= Mustache.render(template, char);
+    charArr.push(html);
+  });
+  return charArr;
 };
-
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -120,7 +125,19 @@ hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
+
+  let thing;
+  arr.forEach(char=> {
+    if (char.name === character && char.children.length){
+      console.log(char.name);
+      console.log(char.children);
+      thing= true;
+    } else {
+      thing= false;
+    }
+  });
+  console.log(thing);
+  return thing;
 
 };
 
@@ -197,7 +214,7 @@ Run your tests from the console: jest challenges-06.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-describe('Testing challenge 1', () => {
+xdescribe('Testing challenge 1', () => {
   test('It should return html markup with the character', () => {
     const filledTemplates = templatingWithMustache();
     const $ = cheerio.load(filledTemplates[0]);
@@ -205,13 +222,13 @@ describe('Testing challenge 1', () => {
   });
 });
 
-describe('Testing challenge 2', () => {
+xdescribe('Testing challenge 2', () => {
   test('It should return the keys from an object', () => {
     expect(getCourseKeys(courseInfo)).toStrictEqual(['name', 'duration', 'topics', 'finalExam']);
   });
 });
 
-describe('Testing challenge 3', () => {
+xdescribe('Testing challenge 3', () => {
   test('It should return an array of the names of the houses', () => {
     expect(getHouses(characters)).toStrictEqual(['Stark', 'Arryn', 'Lannister', 'Targaryen', 'Tyrell', 'Greyjoy', 'Snow']);
     expect(getHouses(characters).length).toStrictEqual(7);
