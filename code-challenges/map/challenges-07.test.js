@@ -20,8 +20,8 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const addTea = () => {
-  // Solution code here...
-}
+  $('ul').append('<li>tea</li>');
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -34,7 +34,20 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 ------------------------------------------------------------------------------------------------ */
 
 const forLoopTwoToThe = (arr) => {
-  // Solution code here...
+
+  let newArr = [];
+  arr.forEach(num =>{
+    newArr.push(Math.pow(2,num));
+  });
+  return newArr;
+  // let newArr = [];
+  // for(let i =0 ; i < arr.length ; i++){
+  //   let num = Math.pow(2,i);
+  //   newArr.push(num);
+  //   console.log(i);
+  // }
+  // console.log(newArr);
+  // return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,7 +57,11 @@ Write a function named forEachTwoToThe that produces the same output as your for
 ------------------------------------------------------------------------------------------------ */
 
 const forEachTwoToThe = (arr) => {
-  // Solution code here...
+  let newArr = [];
+  arr.forEach(num =>{
+    newArr.push(Math.pow(2,num));
+  });
+  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,7 +71,7 @@ Write a function named mapTwoToThe that produces the same output as your forLoop
 ------------------------------------------------------------------------------------------------ */
 
 const mapTwoToThe = (arr) => {
-  // Solution code here...
+  return arr.map(num => Math.pow(2,num));
 };
 
 /* ------------------------------------------------------------------------------------------------
