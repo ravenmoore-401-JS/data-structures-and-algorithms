@@ -45,13 +45,7 @@ Each type of code challenge has slightly different instructions. Please refer to
   - You will have folder named `__tests__` and within it, a test file called `[data-structure].test.js`
     - i.e. `__tests__/linked-list.test.js`
     - Add to the tests written for this data structure to cover your new method(s)
-
-### Code Challenge / Algorithm
-
-Code challenges should be completed within a folder named `code-challenges` under the `javascript` level
-
-- Daily Setup:
-  - Create a new folder under the `javascript` level, with the name of the code challenge
+new Date()new folder under the `javascript` level, with the name of the code challenge
     - Each code challenge assignment identifies the branch name to use, for example 'find-maximum-value'
     - For clarity, create your folder with the same name, ensuring that it's `kebab-cased`
     - i.e. For a challenge named 'find-maximum-value', create the folder:`code-challenges/find-maximum-value`
