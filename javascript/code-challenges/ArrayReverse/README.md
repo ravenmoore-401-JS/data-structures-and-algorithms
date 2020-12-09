@@ -15,4 +15,4 @@ Reverse an array in javascript, without using built-in methods
 
 ## Solution
 <!-- Embedded whiteboard image -->
-![whiteboard](CC1-whiteboard.png)
+![whiteboard](../assets/CC1-whiteboard.png)
