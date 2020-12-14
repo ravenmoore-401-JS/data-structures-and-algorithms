@@ -22,9 +22,7 @@ if the value at middle index is greater than the "target value" find  a new midd
 
 if the value at middle index is greater than the "target value" find a new middle index of the lower half of the current target range and start compare loop again.
 
-
 If no match return -1 as a fail.
-
 
 ## Solution
 <!-- Embedded whiteboard image -->
