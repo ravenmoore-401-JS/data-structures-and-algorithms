@@ -46,6 +46,34 @@ class LinkedList {
     return newString += `{Null}`;
   }
 
+  insertBefore(position,valueToAdd){
+    let currentNode = this.head;
+    while((currentNode.next !== null) && (currentNode.next.value !== position)){
+      currentNode=currentNode.next;
+    }
+    if((!currentNode.next)||(currentNode.next.value !== position)){
+      return null;
+    }else{
+      const node = new Node(valueToAdd);
+      node.next = currentNode;
+      currentNode.next = node;
+    }
+  }
+
+  insertAfter(position,valueToAdd){
+    let currentNode = this.head;
+    while((currentNode.next !== null) && (currentNode.value !== position)){
+      currentNode = currentNode.next;
+    }
+    if((!currentNode.next)||(currentNode.value !== position)){
+      return null;
+    }else{
+      const node = new Node(valueToAdd);
+      node.next = currentNode.next;
+      currentNode.next = node;
+    }
+  }
+
 }
 
 module.exports = LinkedList;
