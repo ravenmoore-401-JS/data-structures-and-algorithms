@@ -27,7 +27,6 @@ class LinkedList {
   }
 
   include(value){
-    const node = new Node(value);
     let currentNode = this.head;
     while(currentNode.value !== value){
       currentNode = currentNode.next;
@@ -35,10 +34,18 @@ class LinkedList {
   }
 
   toString(){
-    const node = new Node(value);
+    let newString = "";
     let currentNode = this.head;
-
+    if(!currentNode){
+      return 'NULL';
+    }
+    while(currentNode){
+      newString += `{${currentNode.value}} -> `;
+      currentNode = currentNode.next;
+    }
+    return newString += `{Null}`;
   }
+
 }
 
 module.exports = LinkedList;

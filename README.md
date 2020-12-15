@@ -71,3 +71,4 @@ The final structure should resemble this:
 1. [ArrayReverse](./javascript/code-challenges/ArrayReverse/README.md)
 1. [ArrayShift](./javascript/code-challenges/ArrayShift/README.md)
 1. [BinarySearch](./javascript/code-challenges/arrayBinarySearch/README.md)
+1. [linked-list](./javascript/code-challenges/linkedList/README.md)
