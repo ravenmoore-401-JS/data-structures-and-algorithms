@@ -19,3 +19,4 @@ i will update this asap
 <!-- Embedded whiteboard image -->
 ![whiteboard](../assets/CC5-whiteboard.jpg)
 ![whiteboard](../assets/CC6-whiteboard.jpg)
+![whiteboard](../assets/CC7-whiteboard.png)

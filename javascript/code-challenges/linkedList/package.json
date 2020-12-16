@@ -1,0 +1,14 @@
+{
+  "name": "linkedlist",
+  "version": "1.0.0",
+  "description": "<!-- Short summary or background information -->",
+  "main": "linked-list.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC"
+}

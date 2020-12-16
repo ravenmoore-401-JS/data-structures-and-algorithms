@@ -73,6 +73,35 @@ class LinkedList {
       currentNode.next = node;
     }
   }
+  kthFromTheEnd(k) {
+    if (k<0) {
+      return 'exemption';
+    }
+    let counter = -1;
+    let currentNode = this.head;
+    console.log(currentNode.next);
+    while(currentNode !== null) {
+      counter++;
+      currentNode =currentNode.next;
+      console.log('counter in while 1:', counter);
+    }
+    console.log('counter after while 1:', counter);
+    if(counter - k < 0 || k > counter) {
+      return 'exemption'
+      // } else if ( (k === 0) && (currentNode.next === null) ) { return currentNode.value }
+    } else {
+      let counterMax = counter;
+      currentNode = this.head;
+      while(currentNode){
+        console.log('counter inside while 2:', counter, k);
+        counter--;
+        if(counter === counterMax - k + 1) {
+          return currentNode.value;
+        }
+        currentNode =currentNode.next;
+      }
+    }
+  }
 
 }
 
