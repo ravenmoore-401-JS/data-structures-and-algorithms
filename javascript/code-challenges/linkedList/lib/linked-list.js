@@ -77,6 +77,11 @@ class LinkedList {
     if (k<0) {
       return 'exemption';
     }
+
+    // create array
+    // unshift each space to get index counter in reverse
+    // return value at index k
+
     let counter = -1;
     let currentNode = this.head;
     console.log(currentNode.next);
