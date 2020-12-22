@@ -11,12 +11,11 @@ describe('stacks', () => {
 
   });
 
-  describe('peak()', ()=>{
+  describe('peek()', ()=>{
     it('should look at the front of the stack', ()=>{
       let stack = new Stack();
       stack.push('a');
-      stack.push('ab');
-      expect(stack.peak).toBe('ab');
+      expect(stack.peek()).toBe('a');
     });
   });
 

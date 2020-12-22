@@ -9,7 +9,8 @@ class Stack {
     if(!this.length){
       throw new Error('Empty Stack add something');
     }
-    return this[this.length ];
+    console.log(this[this.length -1]);
+    return this[this.length-1];
   }
 
   push(item) {
@@ -32,5 +33,11 @@ class Stack {
     return this.length === 0;
   }
 }
+
+
+let testStack = new Stack();
+testStack.push('a');
+
+console.log(testStack.peek());
 
 module.exports = Stack;

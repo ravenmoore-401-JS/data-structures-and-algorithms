@@ -2,26 +2,34 @@
 
 class Queue {
   constructor(){
-    this.storage = new Array();
+    this.front = null;
     this.end = null;
   }
 
-  enqueue(value) {
-    // O(1)
-    this.storage.push(value);
-    this.end = this.storage[this.storage.length - 1];
+  enqueue(item) {
+    let queuedItem = {value: item, next: null};
+    if(this.end) {this.end.next = queuedItem;}
+    this.end =queuedItem;
+    if (!this.front){ this.front = queuedItem;}
   }
 
+
   dequeue() {
+    if (!this.front){ throw new Error('Empty Queue');}
+    const tempItem = this.front;
+    this.front = this.front.next;
+    return tempItem.value;
     // O(n)
-    return this.storage.shift();
-    // TODO: add error checking
   }
 
   peek() {
     // O(1)
-    return this.storage[0]; // [1, 2, 3, 4, 5]
-    // TODO: add error checking
+    if (!this.front){ throw new Error('Empty Queue');}
+    return this.front.value;
+  }
+
+  isEmpty() {
+    return !this.front;
   }
 }
 
