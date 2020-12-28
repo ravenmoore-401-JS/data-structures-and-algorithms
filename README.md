@@ -75,3 +75,4 @@ The final structure should resemble this:
 1. [StacksAndQueues](./javascript/code-challenges/stacksAndQueues/README.md)
 1. [queueWithStacks](./javascript/code-challenges/queueWithStacks/README.md)
 1. [animalShelter](./javascript/code-challenges/animalShelter/README.md)
+1. [multiBracketValidation](./javascript/code-challenges/multiBracketValidation/README.md)

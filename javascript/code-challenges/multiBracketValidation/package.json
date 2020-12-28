@@ -1,0 +1,14 @@
+{
+  "name": "multi-bracket-validation",
+  "version": "1.0.0",
+  "description": "<!-- Short summary or background information -->",
+  "main": "multi-bracket-validation.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "author": "",
+  "license": "ISC"
+}
