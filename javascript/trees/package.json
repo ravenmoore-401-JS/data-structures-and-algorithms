@@ -1,0 +1,12 @@
+{
+  "name": "trees",
+  "version": "1.0.0",
+  "description": "",
+  "main": "trees.js",
+  "scripts": {
+    "test": "jest --watchAll --coverage"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
