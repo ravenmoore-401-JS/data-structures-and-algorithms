@@ -4,57 +4,75 @@ const Node = require('./node');
 class BinaryTree {
   constructor(root = null){
     this.root= root;
-  };
-
+  }
   preOrder(){
     const results = [];
-    if (!root){return null;}
+    if (!this.root){return null;}
     let _traverse = (node) => {
-      results.push(node.value);   
-      if (node.left) _traverse(node.left)
-      if (node.right) _traverse(node.right)
-    }
+      results.push(node.value);
+      if (node.left) _traverse(node.left);
+      if (node.right) _traverse(node.right);
+    };
     _traverse(this.root);
+    return results;
   }
 
   inOrder(){
     const results = [];
-    if (!root){return null;}
+    if (!this.root){return null;}
     let _traverse = (node) => {
-      if (node.left) _traverse(node.left)
-      results.push(node.value);   
-      if (node.right) _traverse(node.right)
-    }
+      if (node.left) _traverse(node.left);
+      results.push(node.value);
+      if (node.right) _traverse(node.right);
+    };
     _traverse(this.root);
+    return results;
+
   }
 
   postOrder(){
     const results = [];
-    if (!root){return null;}
+    if (!this.root){return null;}
     let _traverse = (node) => {
-      if (node.left) _traverse(node.left)
-      if (node.right) _traverse(node.right)
-      results.push(node.value);   
-    }
+      if (node.left) _traverse(node.left);
+      if (node.right) _traverse(node.right);
+      results.push(node.value);
+    };
     _traverse(this.root);
+    return results;
+
   }
 
-  findMaxValue(tree){
+  findMaxValue(){
     let treeMax = 0;
-    if(!tree.root) return null;
+    if(!this.root) return null;
     let _traverse = (node) => {
       if(node.value > treeMax)treeMax= node.value;
       if (node.left) _traverse(node.left);
       if (node.right) _traverse(node.right);
     };
-    _traverse(tree);
+    _traverse(this.root);
     return treeMax;
+  }
+
+  contains(value){
+    if(typeof value !== 'number'){
+      return null;
+    }
+    if(!this.root) return null;
+    let _traverse = (node) => {
+      if(node.value === value)return true;
+      if (node.left) _traverse(node.left);
+      if (node.right) _traverse(node.right);
+      return false;
+    };
+    _traverse(this.root);
   }
 }
 
 class BinarySearchTree extends BinaryTree{
 
-  addToBottom(value){
+  addToBST(value){
     if(typeof value !== 'number'){
       return null;
     }
@@ -84,19 +102,7 @@ class BinarySearchTree extends BinaryTree{
     };
     _insert(this.root);
   }
-
-  contains(value){
-    if(typeof value !== 'number'){
-      return null;
-    }
-    if(!this.root) return null;
-    let _traverse = (node) => {
-      if(node.value === value)return true;
-      if (node.left) _traverse(node.left);
-      if (node.right) _traverse(node.right);
-      return false;
-    };
-    _traverse(this.root);
-  }
 }
 
+module.exports = BinaryTree;
+module.exports = BinarySearchTree;

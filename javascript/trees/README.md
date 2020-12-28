@@ -14,4 +14,4 @@ need to clarify what is going on.
 
 ## Solution
 <!-- Embedded whiteboard image -->
-[whiteboard]('./assets/code-challenge16.png');
+![whiteboard](./assets/code-challenge16.png);
