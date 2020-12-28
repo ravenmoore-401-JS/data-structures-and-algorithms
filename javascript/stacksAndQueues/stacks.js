@@ -2,29 +2,42 @@
 
 class Stack {
   constructor(){
-    this.storage ={};
-    this.top = null;
+    this.length = 0;
   }
 
-  peek( ) {
-    if(!this.top){throw new Error('Stack is empty -cannot peak');}
-    return this.top;
+  peek() {
+    if(!this.length){
+      throw new Error('Empty Stack add something');
+    }
+    console.log(this[this.length -1]);
+    return this[this.length-1];
   }
 
   push(item) {
     // O(n)
-    this.storage.unshift(item);
-    this.top = item;
+    this[this.length++] = item;
   }
 
   pop() {
     // O(n)
-    const item = this.storage.shift();
-    // reassign my top to the new top of the stack/array
-    this.top = this.storage[0];
-    // return the item that I poped off
+    if(!this.length){
+      throw new Error('Empty Stack add something');
+    }
+    let item = this[this.length - 1];
+    this.length--;
+
     return item;
   }
+
+  isEmpty(){
+    return this.length === 0;
+  }
 }
+
+
+let testStack = new Stack();
+testStack.push('a');
+
+console.log(testStack.peek());
 
 module.exports = Stack;
