@@ -25,4 +25,4 @@ find max value is like contains but we track the current largest number and retu
 ## Solution
 <!-- Embedded whiteboard image -->
 ![whiteboard](./assets/code-challenge16.png);
-
+![whiteboard](./assets/code-challenge17.jpg);

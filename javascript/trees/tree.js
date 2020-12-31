@@ -69,6 +69,10 @@ class BinaryTree {
     };
     _traverse(this.root);
   }
+
+  breadthFirst(){
+    
+  }
 }
 
 class BinarySearchTree extends BinaryTree{
