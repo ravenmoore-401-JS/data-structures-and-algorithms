@@ -10,6 +10,7 @@ Trees data structure
 
 followed along with a demo on trees provied by lena,
 
+
 PreOrder Method:
   we add root to the event stack then look at left if there is a left we make it root and and repeet the process if left is null we look at right and do the same
 
@@ -24,3 +25,4 @@ find max value is like contains but we track the current largest number and retu
 ## Solution
 <!-- Embedded whiteboard image -->
 ![whiteboard](./assets/code-challenge16.png);
+

@@ -5,6 +5,7 @@ class BinaryTree {
   constructor(root = null){
     this.root= root;
   }
+  
   preOrder(){
     const results = [];
     if (!this.root){return null;}
