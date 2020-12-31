@@ -1,14 +1,29 @@
 'use strict';
-const Stack = require('../stack');
+const Stack = require('../stacks');
 
 describe('stacks', () => {
   describe('push()', () => {
     it('add a value to the top of a stack', () => {
       let stack = new Stack();
       stack.push(1);
-      expect(stack.top).toEqual(1);
+      expect(stack.length).toEqual(1);
     });
 
+  });
+
+  describe('peek()', ()=>{
+    it('should look at the front of the stack', ()=>{
+      let stack = new Stack();
+      stack.push('a');
+      expect(stack.peek()).toBe('a');
+    });
+  });
+
+  describe('isEmpty()',()=>{
+    it('should return boolean of content status', ()=>{
+      let stack = new Stack();
+      expect(stack.isEmpty()).toEqual(true);
+    });
   });
 
   describe('pop()', () => {
@@ -18,9 +33,6 @@ describe('stacks', () => {
       expect(stack.pop()).toEqual(1);
     });
 
-    // it('returns null if no values are in the stack', () => {
-
-    // })
   });
 });
 

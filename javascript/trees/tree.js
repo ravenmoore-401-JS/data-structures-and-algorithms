@@ -5,70 +5,105 @@ class BinaryTree {
   constructor(root = null){
     this.root= root;
   }
+  
+  preOrder(){
+    const results = [];
+    if (!this.root){return null;}
+    let _traverse = (node) => {
+      results.push(node.value);
+      if (node.left) _traverse(node.left);
+      if (node.right) _traverse(node.right);
+    };
+    _traverse(this.root);
+    return results;
+  }
+
+  inOrder(){
+    const results = [];
+    if (!this.root){return null;}
+    let _traverse = (node) => {
+      if (node.left) _traverse(node.left);
+      results.push(node.value);
+      if (node.right) _traverse(node.right);
+    };
+    _traverse(this.root);
+    return results;
+
+  }
+
+  postOrder(){
+    const results = [];
+    if (!this.root){return null;}
+    let _traverse = (node) => {
+      if (node.left) _traverse(node.left);
+      if (node.right) _traverse(node.right);
+      results.push(node.value);
+    };
+    _traverse(this.root);
+    return results;
+
+  }
+
+  findMaxValue(){
+    let treeMax = 0;
+    if(!this.root) return null;
+    let _traverse = (node) => {
+      if(node.value > treeMax)treeMax= node.value;
+      if (node.left) _traverse(node.left);
+      if (node.right) _traverse(node.right);
+    };
+    _traverse(this.root);
+    return treeMax;
+  }
+
+  contains(value){
+    if(typeof value !== 'number'){
+      return null;
+    }
+    if(!this.root) return null;
+    let _traverse = (node) => {
+      if(node.value === value)return true;
+      if (node.left) _traverse(node.left);
+      if (node.right) _traverse(node.right);
+      return false;
+    };
+    _traverse(this.root);
+  }
 }
 
-const preOrder = (root)=> {
-  if (!root){
-    return undefined;
+class BinarySearchTree extends BinaryTree{
+
+  addToBST(value){
+    if(typeof value !== 'number'){
+      return null;
+    }
+    if (!this.root){
+      this.root = new Node(value);
+      return;
+    }
+    let _insert = (node) => {
+      if(value < node.value){
+        if(node.left === null){
+          node.left = new Node(value);
+          return;
+        }
+        else if(node.left){
+          return _insert(node.left);
+        }
+      }
+      if(value >= node.value){
+        if(node.right === null){
+          node.right = new Node(value);
+          return;
+        }
+        else if(node.right){
+          return _insert(node.right);
+        }
+      }
+    };
+    _insert(this.root);
   }
-  //do root things here
-  console.log('im at node',root);
-  //then traverse
-  preOrder(root.left);
-  preOrder(root.right);
-  return undefined;
-};
-const postOrder = (root)=> {
-  if (!root){
-    return undefined;
-  }
-  //do root things here
-  //then traverse
-  postOrder(root.left);
-  postOrder(root.right);
-  console.log('im at node',root);
-  return undefined;
-};
-const inOrder=(root)=>{
-  if (!root){
-    return undefined;
-  }
+}
 
-  inOrder(root.left);
-  console.log('im at node',root);
-  inOrder(root.right);
-  return undefined;
-};
-
-
-const node1 = new Node(1);
-const node2 = new Node(2);
-const node3 = new Node(3);
-const node4 = new Node(4);
-const node5 = new Node(5);
-const node6 = new Node(6);
-const node7 = new Node(7);
-const node8 = new Node(8);
-const node9 = new Node(9);
-const node10= new Node(10);
-
-
-const tree = new BinaryTree(node1);
-
-node1.left =node2;
-node1.right =node3;
-
-node2.left =node4;
-node2.right = node5;
-
-node3.left = node6;
-node3.right = node7;
-
-node4.left = node8;
-
-node8.left = node9;
-node8.right = node10;
-
-preOrder(tree);
-postOrder(tree);
-inOrder(tree);
+module.exports = BinaryTree;
+module.exports = BinarySearchTree;

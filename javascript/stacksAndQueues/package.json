@@ -4,7 +4,7 @@
   "description": "",
   "main": "stacks-and-queues.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --watchAll --coverage"
   },
   "keywords": [],
   "author": "",
