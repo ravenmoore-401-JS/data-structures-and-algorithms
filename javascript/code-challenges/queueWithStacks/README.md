@@ -10,9 +10,14 @@ create a pseudoQueue using stack
 
 ## Approach & Efficiency
 
-need to get a better understanding of the problem befor i can go to solve this
+dump the array in to stackA
+add value to top of stackA
+dump new stackA into stackB revrsing it
+inter act with stackB as a queue.
+
 
 
 ## Solution
 <!-- Embedded whiteboard image -->
 ![whiteboard](../assets/CC11-whiteboard.jpg)
+![whiteboard](../assets/CC11.2-whiteboard.jpg)
