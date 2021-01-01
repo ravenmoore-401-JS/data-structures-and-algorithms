@@ -1,11 +1,12 @@
 'use strict';
 const Node = require('./node');
+const Queue =require('./queue');
 
 class BinaryTree {
   constructor(root = null){
     this.root= root;
   }
-  
+
   preOrder(){
     const results = [];
     if (!this.root){return null;}
@@ -71,7 +72,21 @@ class BinaryTree {
   }
 
   breadthFirst(){
-    
+    let output = [];
+    let holdingQueue = new Queue;
+    if(!this.root){return null;}
+    if(!holdingQueue.front) {return null;}
+    let _traverse =(node) =>{
+      output += node.value;
+      if(node.left) holdingQueue.enqueue(node.left.value);
+      if(node.right) holdingQueue.enqueue(node.right.value);
+      if(holdingQueue.front.value === node.value){
+        holdingQueue.dequeue();
+        _traverse(holdingQueue.front);
+      }
+    };
+    _traverse(this.root);
+    return output;
   }
 }
 

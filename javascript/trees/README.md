@@ -26,3 +26,4 @@ find max value is like contains but we track the current largest number and retu
 <!-- Embedded whiteboard image -->
 ![whiteboard](./assets/code-challenge16.png);
 ![whiteboard](./assets/code-challenge17.jpg);
+![whiteboard](./assets/code-challenge17.2.jpg);
