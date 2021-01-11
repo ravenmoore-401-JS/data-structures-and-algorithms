@@ -27,8 +27,10 @@ class LinkedList {
   }
 
   include(value){
+    if(!this.head){return false;}
     let currentNode = this.head;
-    while(currentNode.value !== value){
+    while(currentNode !== null){
+      if(currentNode.value === value) return true;
       currentNode = currentNode.next;
     }
   }
