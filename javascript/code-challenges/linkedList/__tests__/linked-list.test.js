@@ -2,7 +2,7 @@
 
 let LL = require('../lib/linked-list.js');
 
-describe('Linked List', () => {
+xdescribe('Linked List', () => {
   it('inserts a node at the beginning an an empty list', () => {
     const list = new LL();
     list.insert('blue');
