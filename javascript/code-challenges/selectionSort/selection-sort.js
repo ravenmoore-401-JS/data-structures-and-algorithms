@@ -19,6 +19,6 @@ function selectionSort(arr){
 
 let newArr = [2,4,22,1,4,3];
 
-console.log(selectionSort(newArr));
+console.log(selectionSort(newArr.length));
 
 module.exports = selectionSort;

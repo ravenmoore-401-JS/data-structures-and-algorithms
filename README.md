@@ -78,3 +78,4 @@ The final structure should resemble this:
 1. [multiBracketValidation](./javascript/code-challenges/multiBracketValidation/README.md)
 1. [Trees](./javascript/trees/README.md)
 1. [selectionSort](./javascript/code-challenges/selectionSort/README.md)
+1. [mergeSort](./javascript/code-challenges/mergeSort/README.md)
