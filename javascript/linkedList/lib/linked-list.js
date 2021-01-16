@@ -9,12 +9,12 @@ class LinkedList {
 
   insert(value) {
     const node = new Node(value);
-    if(node){
-      return this.head = node;
-    }else{
-      node.next = this.head;
-      this.head = node;
+    if(!this.haed){return this.head = node;}
+    let current = this.head;
+    while(current){
+      current =current.next;
     }
+    current.next = node;
   }
 
   append(value) {

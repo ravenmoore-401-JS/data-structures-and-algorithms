@@ -2,7 +2,7 @@
 
 let LL = require('../lib/linked-list.js');
 
-xdescribe('Linked List', () => {
+describe('Linked List', () => {
   it('inserts a node at the beginning an an empty list', () => {
     const list = new LL();
     list.insert('blue');
@@ -40,7 +40,6 @@ xdescribe('Linked List', () => {
 
     list.insertBefore('green','Orange');
     expect(list.include('Orange')).toEqual(true);
-    expect()
 
   });
   it('inserts a value after a chosen position', ()=>{
