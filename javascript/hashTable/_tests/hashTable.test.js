@@ -22,13 +22,17 @@ describe('Hash Table', () => {
   it('get a value', () =>{
     const catKey = newHash.get('cat');
     console.log('catkey',catKey);
-    expect(catKey.head.value).toEqual({ cat: 'lena cat hates laptops' });
+    expect(catKey).toEqual({ cat: 'lena cat hates laptops' });
   });
 
   it('wont get a N/A value', () =>{
     const dogKey = newHash.get('dog');
     console.log('dogkey',dogKey);
-    expect(dogKey).toBeUndefined();
+    expect(dogKey).toBe(null);
+  });
+
+  it('returns a true false on if a key is in the map', () =>{
+    expect(newHash.contains('cat')).toBe(true);
   });
 
 });

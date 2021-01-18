@@ -31,8 +31,16 @@ class HashMap {
   get(key){
     // hash incoming key
     const hashedKey = this.hash(key);
+    if(!this.map[hashedKey])return null;
     // return matching key
-    return this.map[hashedKey];
+    let current = this.map[hashedKey].head;
+    while(current){
+      if(current.value.hasOwnProperty(key))return current.value;
+      current = current.next;
+
+      console.log(this.map[hashedKey].head.value);
+    }
+    return null;
   }
 
   contains(key){
@@ -40,7 +48,7 @@ class HashMap {
     // hash incoming key
     const hashedKey = this.hash(key);
     // search for matching index
-    if(this.map[hashedKey])return this.map[hashedKey];
+    if(this.map[hashedKey])return true;
     return false;
     // return t/f if exists
 
