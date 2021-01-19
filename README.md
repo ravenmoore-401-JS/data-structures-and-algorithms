@@ -79,3 +79,5 @@ The final structure should resemble this:
 1. [Trees](./javascript/trees/README.md)
 1. [selectionSort](./javascript/code-challenges/selectionSort/README.md)
 1. [mergeSort](./javascript/code-challenges/mergeSort/README.md)
+1. [hashMap](./javascript/hashTable/README.md)
+1. [repeatedWords](./javascript/code-challenges/repeated-words/README.md)
