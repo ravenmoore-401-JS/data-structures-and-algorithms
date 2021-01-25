@@ -82,3 +82,4 @@ The final structure should resemble this:
 1. [hashMap](./javascript/hashTable/README.md)
 1. [repeatedWords](./javascript/code-challenges/repeated-words/README.md)
 1. [tree-Intersection](./javascript/code-challenges/treeIntersection/README.md)
+1. [left-join](./javascript/code-challenges/left-join/README.md)

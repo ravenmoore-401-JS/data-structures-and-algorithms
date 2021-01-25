@@ -7,6 +7,26 @@ class BinaryTree {
     this.root= root;
   }
 
+  add(value){
+    if (!this.root){
+      this.root = new Node(value);
+      return;
+    }
+    let _insert = (node) => {
+      if(node.left === null){
+        node.left = new Node(value);
+        return;
+      }
+      if(node.right === null){
+        node.right = new Node(value);
+        return;
+      }
+      else if(!node.left.next) return _insert(node.left);
+      else return _insert(node.right);
+    };
+    _insert(this.root);
+  }
+
   preOrder(){
     const results = [];
     if (!this.root){return null;}
