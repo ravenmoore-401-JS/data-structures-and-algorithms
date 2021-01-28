@@ -85,4 +85,4 @@ The final structure should resemble this:
 1. [left-join](./javascript/code-challenges/left-join/README.md)
 1. [Graphs](./javascript/graphs/README.md);
 1. [Graphs - breadth first](./javascript/graphs/README.md);
-1. [Graphs - get edges](./javascript/graphs/README.md);
+1. [Graphs - get edges](./javascript/graphs/README.md);1. [Graphs - depthFirst](./javascript/graphs/README.md);

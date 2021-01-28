@@ -21,5 +21,5 @@ An empty graph properly returns null
 
 ## API
 <!-- Description of each method publicly available in your Graph -->
-![BFS](./assets/breadthFirst-whiteboard.jpg)
-[get-edges](./assets/WB-CC37.jpg)
+![BFS](./assets/breadthFirst-whiteboard.png)
+![get-edges](./assets/WB-CC37.jpg)
